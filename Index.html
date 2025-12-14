@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Platformer Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="scoreboard">
+        Score: <span id="score-value">0</span>
+    </div>
+    <div id="game-container">
+    <div id="start-line" title="Insertion Point: 500px"></div>
+    <div id="remove-line" title="Removal Point: 100px"></div>  
+    <audio class="lose-sound" src="https://www.myinstants.com/media/sounds/kya-kar-raha-hai-tu.mp3" preload="auto"></audio>
+    <div id="platform"></div>
+    <div id="player"></div>
+    
+    <div id="game-over-screen" style="display: none;">
+        <h2>Game Over!</h2>
+        <p>You hit a pillar.</p>
+        <button id="restart-btn">Restart Game</button>
+    </div>
+    </div>
+
+
+    <div id="controls">
+        <button id="left-btn" class="control-btn">◀️ Left</button>
+        <button id="jump-btn" class="control-btn">⬆️ Jump</button>
+        <button id="right-btn" class="control-btn">▶️ Right</button>
+    </div>
+
+
+    <script src="Untitled-1"></script>
+</body>
+</html>

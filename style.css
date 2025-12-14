@@ -1,0 +1,132 @@
+/* ... (existing styles) ... */
+
+#controls{
+    display: flex;
+    justify-content: space-around;
+    width: 100%; /* Match game container width */
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.control-btn{
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    
+    border: 3px solid #333;
+    background-color: #fff;
+    border-radius: 8px;
+    user-select: none; /* Prevents text selection on rapid tapping */
+}
+
+/* Optional: Make the jump button stand out */
+#jump-btn{
+    background-color: gold;
+}
+body{
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center content */
+    flex-direction: column;  /* <-- ADD THIS: Stack children vertically */
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+
+#game-container{
+    width: 600px;
+    height: 400px;
+    background-color: RGB(135, 206, 235);
+    border: 5px solid #333;
+    position: relative; /* Crucial for absolute positioning of player */
+    overflow: hidden;
+}
+
+#player{
+    width: 50px;
+    height: 50px;
+    background-image: url("https://i.ibb.co/Q7mTcF38/1765523379689-removebg-preview.png");
+    background-size: 240px 70px;
+    background-repeat: no-repeat;
+    background-color: ​skyblue; /* Our "Mario" */
+    position: absolute;
+    bottom: 30px; /* Starts just above the platform */
+    left: 50px;
+    transition: background-color 0.1s; /* Subtle feedback for jumping */
+}
+
+#platform{
+    width: 100%;
+    height: 30px;
+    background-color: green;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+#start-line {
+            position: absolute;
+            left: 600px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: blue;
+            z-index: 10;
+        }
+
+#remove-line {
+            position: absolute;
+            left: 100px;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            background-color: red;
+            z-index: 10;
+        }
+.moving-div {
+            position: absolute; /* Essential for precise positioning */
+            width: 50px; /* Constant Width */
+            background-color: green; /* A nice color */
+            border: 1px solid #2e7d32;
+            transition: left 0.1s linear; /* Smooth movement transition */
+            box-sizing: border-box;
+            display: inline-block;
+        }
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 20; /* Ensure it covers everything */
+    text-align: center;
+}
+
+#restart-btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    cursor: pointer;
+    background-color: gold;
+    border: none;
+    border-radius: 5px;
+    margin-top: 15px;
+}
+#scoreboard {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff;
+    padding: 10px 20px;
+    border: 3px solid #333;
+    border-radius: 8px;
+    margin-bottom: 10px; /* Space between score and game container */
+    width: 200px; /* Set a fixed width */
+    text-align: center;
+}
